@@ -30,6 +30,13 @@ npm run test
 ```
 npm run lint
 ```
+### For Docker 
+
+```
+docker build . -t name_of_app
+
+docker run --name name_of_instance -d -p 80:80 name_of_app
+```
 
 ### Customize configuration
 
