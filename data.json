@@ -1,136 +1,144 @@
 {
-    "data":{
-       "homeComponent":{
-          "icons":[
-             {
-                "href":"https://github.com/beinganushasan",
-                "icon":"fab fa-github"
-             },
-             {
-                "href":"",
-                "icon":"fab fa-stack-overflow"
-             },
-             {
-                "href":"https://twitter.com/beinganushasan",
-                "icon":"fab fa-twitter"
-             },
-             {
-                "href":"https://www.linkedin.com/in/beinganushasan",
-                "icon":"fab fa-linkedin-in"
-             },
-             {
-                "href":"https://www.facebook.com/beinganushasan",
-                "icon":"fab fa-facebook-f"
-             }
-          ],
-          "text1":"['Back-End Developer', 'Web Developer', 'IT Operations'],",
-          "leftImage":"https://i.imgur.com/bgmaGzB.jpg',",
-          "rightImage":"https://i.imgur.com/lI41aIl.jpg',",
-          "leftImage2":"https://i.imgur.com/5i7JHvu.png',",
-          "rightImage2":"https://i.imgur.com/HHsfw1R.jpg',"
-       },
-       "serviceComponent":{
-          "services":[
-             {
-                "title":"Web Backend Development"
-             },
-             {
-                "title":"Web Frontend Development"
-             },
-             {
-                "title":"Android Development"
-             },
-             {
-                "title":"Linux/SysAdmin"
-             }
-          ]
-       },
-       "resumeComponent":{
-          "resumeLink":"https://drive.google.com/file/d/1xgL1Mynrz8euapg_PtSX3jN1X10n0O3M/view?usp=sharing"
-       },
-       "portfolioComponent":{
-          "backend":{
-             "projects":[
-                {
-                   "dialog":"false",
-                   "title":"Saathi",
-                   "git":"https://github.com/BeingAnushasan/Microservices-Saathi.git",
-                   "demo":"#",
-                   "tech":{
-                      "tech1":"Java',",
-                      "tech2":"Spring Boot',",
-                      "tech3":"Spring Security',",
-                      "tech4":"Docker"
-                   },
-                   "poster":"https://i.imgur.com/ilQRI2z.png"
-                },
-                {
-                   "dialog":"false",
-                   "title":"Recognizer & Gcode Converter",
-                   "git":"https://github.com/BeingAnushasan/Recognizer-Gcode-Converter.git",
-                   "demo":"#",
-                   "tech":{
-                      "tech1":"Python',",
-                      "tech2":"C++',",
-                      "tech3":"Tkinter',",
-                      "tech4":"Gcode"
-                   },
-                   "poster":"https://i.imgur.com/cyK7kvw.jpg"
-                }
-             ]
-          },
-          "frontend":{
-             "projects":[
-                {
-                   "dialog":"false",
-                   "title":"My Portfolio",
-                   "git":"https://github.com/BeingAnushasan/anushasan-portfolio-vue.git",
-                   "demo":"https://anushasanpoudel.com.np",
-                   "tech":{
-                      "tech1":"Vue',",
-                      "tech2":"JavaScript',",
-                      "tech3":"HTML',",
-                      "tech4":"FormSpree"
-                   },
-                   "poster":"https://i.imgur.com/MXk1Zyc.png"
-                }
-             ]
-          },
-          "mobile":{
-             "projects":[
-                {
-                   "dialog":"false",
-                   "title":"Rss Reader",
-                   "git":"https://github.com/BeingAnushasan/RssReader.git",
-                   "demo":"#",
-                   "tech":{
-                      "tech1":"Java',",
-                      "tech2":"JSON',",
-                      "tech3":"XML',",
-                      "tech4":"REST"
-                   },
-                   "poster":"https://i.imgur.com/DsVEhoE.png"
-                },
-                {
-                   "dialog":"false",
-                   "title":"Waer Level Controller",
-                   "git":"https://github.com/BeingAnushasan/Water-Level-Controller-main.git",
-                   "demo":"#",
-                   "tech":{
-                      "tech1":"Java',",
-                      "tech2":"Bluetooth Libs',",
-                      "tech3":"',",
-                      "tech4":""
-                   },
-                   "poster":"https://i.imgur.com/w4gkDPD.png"
-                }
-             ]
-          }
-       },
-       "contactComponent":{
-          "location":"Pokhara, Nepal",
-          "email":"beinganushasan@gmail.com",
-          "phone":"9845447335"
-       }
-    }
- }
+   "data":{
+      "homeComponent":{
+         "icons":[
+            {
+               "href":"https://github.com/beinganushasan",
+               "icon":"fab fa-github"
+            },
+            {
+               "href":"",
+               "icon":"fab fa-stack-overflow"
+            },
+            {
+               "href":"https://twitter.com/beinganushasan",
+               "icon":"fab fa-twitter"
+            },
+            {
+               "href":"https://www.linkedin.com/in/beinganushasan",
+               "icon":"fab fa-linkedin-in"
+            },
+            {
+               "href":"https://www.facebook.com/beinganushasan",
+               "icon":"fab fa-facebook-f"
+            }
+         ],
+         "text1":[
+            "Back-End Developer",
+            "Web Developer",
+            "IT Operations"
+         ],
+         "leftImage":"https://i.imgur.com/bgmaGzB.jpg',",
+         "rightImage":"https://i.imgur.com/lI41aIl.jpg',",
+         "leftImage2":"https://i.imgur.com/5i7JHvu.png',",
+         "rightImage2":"https://i.imgur.com/HHsfw1R.jpg',"
+      },
+      "serviceComponent":{
+         "services":[
+            {
+               "src":"https://i.imgur.com/WBh6wt6.png",
+               "title":"Web Backend Development"
+            },
+            {
+               "src":"https://i.imgur.com/BIfQCr0.png",
+               "title":"Web Frontend Development"
+            },
+            {
+               "src":"https://i.imgur.com/hCJhZR5.png",
+               "title":"Android Development"
+            },
+            {
+               "src":"https://i.imgur.com/9yEccDa.png",
+               "title":"Linux/SysAdmin"
+            }
+         ]
+      },
+      "resumeComponent":{
+         "resumeLink":"https://drive.google.com/file/d/1xgL1Mynrz8euapg_PtSX3jN1X10n0O3M/view?usp=sharing"
+      },
+      "portfolioComponent":{
+         "backend":{
+            "projects":[
+               {
+                  "dialog":"false",
+                  "title":"Saathi",
+                  "git":"https://github.com/BeingAnushasan/Microservices-Saathi.git",
+                  "demo":"#",
+                  "tech":{
+                     "tech1":"Java',",
+                     "tech2":"Spring Boot',",
+                     "tech3":"Spring Security',",
+                     "tech4":"Docker"
+                  },
+                  "poster":"https://i.imgur.com/ilQRI2z.png"
+               },
+               {
+                  "dialog":"false",
+                  "title":"Recognizer & Gcode Converter",
+                  "git":"https://github.com/BeingAnushasan/Recognizer-Gcode-Converter.git",
+                  "demo":"#",
+                  "tech":{
+                     "tech1":"Python',",
+                     "tech2":"C++',",
+                     "tech3":"Tkinter',",
+                     "tech4":"Gcode"
+                  },
+                  "poster":"https://i.imgur.com/cyK7kvw.jpg"
+               }
+            ]
+         },
+         "frontend":{
+            "projects":[
+               {
+                  "dialog":"false",
+                  "title":"My Portfolio",
+                  "git":"https://github.com/BeingAnushasan/anushasan-portfolio-vue.git",
+                  "demo":"https://anushasanpoudel.com.np",
+                  "tech":{
+                     "tech1":"Vue',",
+                     "tech2":"JavaScript',",
+                     "tech3":"HTML',",
+                     "tech4":"FormSpree"
+                  },
+                  "poster":"https://i.imgur.com/MXk1Zyc.png"
+               }
+            ]
+         },
+         "mobile":{
+            "projects":[
+               {
+                  "dialog":"false",
+                  "title":"Rss Reader",
+                  "git":"https://github.com/BeingAnushasan/RssReader.git",
+                  "demo":"#",
+                  "tech":{
+                     "tech1":"Java',",
+                     "tech2":"JSON',",
+                     "tech3":"XML',",
+                     "tech4":"REST"
+                  },
+                  "poster":"https://i.imgur.com/DsVEhoE.png"
+               },
+               {
+                  "dialog":"false",
+                  "title":"Waer Level Controller",
+                  "git":"https://github.com/BeingAnushasan/Water-Level-Controller-main.git",
+                  "demo":"#",
+                  "tech":{
+                     "tech1":"Java',",
+                     "tech2":"Bluetooth Libs',",
+                     "tech3":"',",
+                     "tech4":""
+                  },
+                  "poster":"https://i.imgur.com/w4gkDPD.png"
+               }
+            ]
+         }
+      },
+      "contactComponent":{
+         "location":"Pokhara, Nepal",
+         "email":"beinganushasan@gmail.com",
+         "phone":"9845447335"
+      }
+   }
+}
