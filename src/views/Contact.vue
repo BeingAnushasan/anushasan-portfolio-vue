@@ -8,25 +8,25 @@
         </h2>
         <div class="py-4 subheading font-weight-bold">
           <v-icon large color="green" left>fas fa-map-marker-alt</v-icon>
-          <span>{{myLocation.split(',')[0]}},&nbsp;</span>
-          <span class="green--text">{{myLocation.split(',')[1]}}</span>
+          <span>{{ myLocation.split(",")[0] }},&nbsp;</span>
+          <span class="green--text">{{ myLocation.split(",")[1] }}</span>
         </div>
         <div class="py-4 subheading font-weight-bold">
           <v-icon large color="green" left>fas fa-envelope</v-icon>
-          <span>{{myEmail.split('@')[0]}}@</span>
-          <span class="green--text">{{myEmail.split('@')[1]}}</span>
+          <span>{{ myEmail.split("@")[0] }}@</span>
+          <span class="green--text">{{ myEmail.split("@")[1] }}</span>
         </div>
         <div class="py-4 subheading font-weight-bold">
           <v-icon large color="green" left>fas fa-phone</v-icon>
           <span>+977&nbsp;</span>
-          <span class="green--text">{{myPhoneNumber}}</span>
+          <span class="green--text">{{ myPhoneNumber }}</span>
         </div>
         <div class="py-4 subheading font-weight-bold">
           <v-icon large color="green" left>fas fa-check</v-icon>
           <span>Freelance</span>
           <span class="green--text"> Available</span>
         </div>
-         <div class="py-4 subheading font-weight-bold">
+        <div class="py-4 subheading font-weight-bold">
           <v-icon large color="green" left>fas fa-check</v-icon>
           <span>Full Time Job</span>
           <span class="green--text"> Available</span>
@@ -76,8 +76,9 @@
             type="submit"
             color="green"
             class="white--text"
-            :disabled=" (body.length<=20)"
-          >SEND MESSAGE</v-btn>
+            :disabled="body.length <= 20"
+            >SEND MESSAGE</v-btn
+          >
           <v-btn @click="clear">clear</v-btn>
         </form>
       </v-flex>
@@ -86,29 +87,29 @@
 </template>
 
 <script>
-import { validationMixin } from 'vuelidate'
+import { validationMixin } from "vuelidate";
 import {
   required,
   maxLength,
   email,
   minLength
-} from 'vuelidate/lib/validators'
+} from "vuelidate/lib/validators";
 export default {
   metaInfo: {
-    title: 'Contact',
-    titleTemplate: '%s ←  Anushasan',
+    title: "Contact",
+    titleTemplate: "%s ←  Anushasan",
     meta: [
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { name: 'description', content: "Anushasan Poudel's Portfolio" },
-      { charset: 'utf-8' },
-      { property: 'og:title', content: 'Anushasan Poudel' },
-      { property: 'og:site_name', content: 'Anushasan Poudel' },
-      { property: 'og:type', content: 'website' },
-      { property: 'og:url', content: 'https://anushasanpoudel.com.np' },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: "description", content: "Anushasan Poudel's Portfolio" },
+      { charset: "utf-8" },
+      { property: "og:title", content: "Anushasan Poudel" },
+      { property: "og:site_name", content: "Anushasan Poudel" },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://anushasanpoudel.com.np" },
       {
-        property: 'og:image'
+        property: "og:image"
       },
-      { property: 'og:description', content: "Anushasan Poudel's Contacts" }
+      { property: "og:description", content: "Anushasan Poudel's Contacts" }
     ]
   },
   mixins: [validationMixin],
@@ -117,15 +118,15 @@ export default {
     email: { required, email },
     body: { required, minLength: minLength(20) }
   },
-  data () {
+  data() {
     return {
-      name: '',
-      email: '',
-      body: '',
-      myPhoneNumber: '',
-      myEmail: '',
-      myLocation: '',
-    }
+      name: "",
+      email: "",
+      body: "",
+      myPhoneNumber: "",
+      myEmail: "",
+      myLocation: ""
+    };
   },
   created() {
     this.$axios
@@ -137,46 +138,45 @@ export default {
   methods: {
     updateData(data) {
       this.myPhoneNumber = data.contactComponent.phone;
-      this.myEmail  = data.contactComponent.email;
-      this.myLocation  = data.contactComponent.location;
+      this.myEmail = data.contactComponent.email;
+      this.myLocation = data.contactComponent.location;
     },
-    submit () {
-      this.$v.$touch()
+    submit() {
+      this.$v.$touch();
     },
-    clear () {
-      this.$v.$reset()
-      this.name = ''
-      this.email = ''
-      this.body = ''
+    clear() {
+      this.$v.$reset();
+      this.name = "";
+      this.email = "";
+      this.body = "";
     }
   },
   computed: {
-    nameErrors () {
-      const errors = []
-      if (!this.$v.name.$dirty) return errors
+    nameErrors() {
+      const errors = [];
+      if (!this.$v.name.$dirty) return errors;
       !this.$v.name.maxLength &&
-        errors.push('Name must be at most 20 characters long')
-      !this.$v.name.required && errors.push('Name is required.')
-      return errors
+        errors.push("Name must be at most 20 characters long");
+      !this.$v.name.required && errors.push("Name is required.");
+      return errors;
     },
-    emailErrors () {
-      const errors = []
-      if (!this.$v.email.$dirty) return errors
-      !this.$v.email.email && errors.push('Must be valid e-mail')
-      !this.$v.email.required && errors.push('E-mail is required')
-      return errors
+    emailErrors() {
+      const errors = [];
+      if (!this.$v.email.$dirty) return errors;
+      !this.$v.email.email && errors.push("Must be valid e-mail");
+      !this.$v.email.required && errors.push("E-mail is required");
+      return errors;
     },
-    bodyErrors () {
-      const errors = []
-      if (!this.$v.body.$dirty) return errors
+    bodyErrors() {
+      const errors = [];
+      if (!this.$v.body.$dirty) return errors;
       !this.$v.body.minLength &&
-        errors.push('Text must be at least 20 characters long')
-      !this.$v.body.required && errors.push('Text is required')
-      return errors
+        errors.push("Text must be at least 20 characters long");
+      !this.$v.body.required && errors.push("Text is required");
+      return errors;
     }
   }
-}
+};
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

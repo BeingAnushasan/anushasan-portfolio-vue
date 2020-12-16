@@ -3,14 +3,14 @@
     <div class="circles">
       <p>
         404
-        <br>
+        <br />
         <small>PAGE NOT FOUND</small>
       </p>
       <span class="circle big"></span>
       <span class="circle med"></span>
       <span class="circle small"></span>
-      <br>
-      <br>
+      <br />
+      <br />
       <v-btn large to="/" class="green--text">
         <v-icon>arrow_back</v-icon>GO HOME
       </v-btn>
@@ -19,7 +19,7 @@
 </template>
 
 <script>
-export default {}
+export default {};
 </script>
 
 <style scoped>

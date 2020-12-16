@@ -7,19 +7,34 @@
           <span class="green--text">Services</span>
         </h2>
       </v-flex>
-      <v-flex v-for="service in services" :key="service.src" xs6 sm3 md3 lg3 xl3>
-        <v-card hover flat color="transparent" :style="{'cursor':'context-menu'}">
+      <v-flex
+        v-for="service in services"
+        :key="service.src"
+        xs6
+        sm3
+        md3
+        lg3
+        xl3
+      >
+        <v-card
+          hover
+          flat
+          color="transparent"
+          :style="{ cursor: 'context-menu' }"
+        >
           <v-card-title></v-card-title>
           <v-img
             :src="service.src"
             height="100"
             aspect-ratio="2.75"
-            :alt="'Anushasan do '+service.title"
+            :alt="'Anushasan do ' + service.title"
             lazy-src="https://cdn.dribbble.com/users/503653/screenshots/3143656/fluid-loader.gif"
             contain
           ></v-img>
           <v-card-title class="justify-center">
-            <v-flex text-xs-center subheading font-weight-bold>{{service.title}}</v-flex>
+            <v-flex text-xs-center subheading font-weight-bold>{{
+              service.title
+            }}</v-flex>
           </v-card-title>
         </v-card>
       </v-flex>
@@ -61,33 +76,34 @@
 <script>
 export default {
   metaInfo: {
-    title: 'Service',
-    titleTemplate: '%s ←  Anushasan',
+    title: "Service",
+    titleTemplate: "%s ←  Anushasan",
     meta: [
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { name: 'description', content: "Anushasan Poudel's Portfolio" },
-      { charset: 'utf-8' },
-      { property: 'og:title', content: 'Anushasan Poudel' },
-      { property: 'og:site_name', content: 'Anushasan Poudel' },
-      { property: 'og:type', content: 'website' },
-      { property: 'og:url', content: 'https://anushasanpoudel.com.np' },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: "description", content: "Anushasan Poudel's Portfolio" },
+      { charset: "utf-8" },
+      { property: "og:title", content: "Anushasan Poudel" },
+      { property: "og:site_name", content: "Anushasan Poudel" },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://anushasanpoudel.com.np" },
       {
-        property: 'og:image'
+        property: "og:image"
       },
-      { property: 'og:description', content: "Anushasan Poudel's Portfolio" }
+      { property: "og:description", content: "Anushasan Poudel's Portfolio" }
     ]
   },
-  data () {
+  data() {
     return {
       clients: [
-        {// clients format
-          name: 'Brandly',
-          src: 'https://i.imgur.com/BLJ16wb.png',
-          href: 'https://www.brandly.com/'
+        {
+          // clients format
+          name: "Brandly",
+          src: "https://i.imgur.com/BLJ16wb.png",
+          href: "https://www.brandly.com/"
         }
       ],
-      services: [],
-    }
+      services: []
+    };
   },
   created() {
     this.$axios
@@ -96,16 +112,14 @@ export default {
       )
       .then(res => this.updateData(res.data.data));
   },
-   methods: {
+  methods: {
     updateData(data) {
       this.services = data.serviceComponent.services;
-      console.log(this.services);
-
     }
   }
-}
+};
 </script>
-<style >
+<style>
 .v-img--reveal {
   opacity: 0.3;
 }

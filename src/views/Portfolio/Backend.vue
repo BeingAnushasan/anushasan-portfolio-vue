@@ -21,7 +21,9 @@
                 height="230"
                 lazy-src="https://cdn.dribbble.com/users/503653/screenshots/3143656/fluid-loader.gif"
               ></v-img>
-              <v-card-title primary-title class="justify-center">{{project.title}}</v-card-title>
+              <v-card-title primary-title class="justify-center">{{
+                project.title
+              }}</v-card-title>
             </v-card>
           </v-flex>
         </template>
@@ -31,16 +33,38 @@
             <h3 class="headline mb-0">
               <span>Technology</span>
             </h3>
-            <v-chip color="green" text-color="white">{{project.tech.tech1}}</v-chip>
-            <v-chip color="green" text-color="white">{{project.tech.tech2}}</v-chip>
-            <v-chip color="green" text-color="white">{{project.tech.tech3}}</v-chip>
-            <v-chip color="green" text-color="white">{{project.tech.tech4}}</v-chip>
+            <v-chip color="green" text-color="white">{{
+              project.tech.tech1
+            }}</v-chip>
+            <v-chip color="green" text-color="white">{{
+              project.tech.tech2
+            }}</v-chip>
+            <v-chip color="green" text-color="white">{{
+              project.tech.tech3
+            }}</v-chip>
+            <v-chip color="green" text-color="white">{{
+              project.tech.tech4
+            }}</v-chip>
           </v-card-text>
           <v-card-actions>
-            <v-btn flat large dark color="green" :href="project.git" target="_blank">
+            <v-btn
+              flat
+              large
+              dark
+              color="green"
+              :href="project.git"
+              target="_blank"
+            >
               <v-icon left>fab fa-github</v-icon>GitHub
             </v-btn>
-            <v-btn large flat dark color="green" :href="project.demo" target="_blank">
+            <v-btn
+              large
+              flat
+              dark
+              color="green"
+              :href="project.demo"
+              target="_blank"
+            >
               <v-icon left>fas fa-desktop</v-icon>Demo
             </v-btn>
           </v-card-actions>
@@ -53,36 +77,35 @@
 <script>
 export default {
   metaInfo: {
-    title: 'Web Portfolio',
-    titleTemplate: '%s ← Anushasan',
+    title: "Web Portfolio",
+    titleTemplate: "%s ← Anushasan",
     meta: [
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
-        name: 'description',
-        content:
-          "Anushasan Poudel's portfolio "
+        name: "description",
+        content: "Anushasan Poudel's portfolio "
       },
-      { charset: 'utf-8' },
-      { property: 'og:title', content: 'Anushasan Poudel' },
-      { property: 'og:site_name', content: 'Anushasan Poudel' },
-      { property: 'og:type', content: 'website' },
-      { property: 'og:url', content: 'https://anushasanpoudel.com.np' },
+      { charset: "utf-8" },
+      { property: "og:title", content: "Anushasan Poudel" },
+      { property: "og:site_name", content: "Anushasan Poudel" },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://anushasanpoudel.com.np" },
       {
-        property: 'og:image',
-        content: 'https://i.imgur.com/Dcz2PGx.jpg'
+        property: "og:image",
+        content: "https://i.imgur.com/Dcz2PGx.jpg"
       },
       {
-        property: 'og:description',
+        property: "og:description",
         content:
-          'Anushasan Poudel Web Portfolio Vue Vue.js Nuxt Nuxt.js HTML CSS Vuetify Axios  JavaScript Web Developer Front-End Frontend Designer App Responsive'
+          "Anushasan Poudel Web Portfolio Vue Vue.js Nuxt Nuxt.js HTML CSS Vuetify Axios  JavaScript Web Developer Front-End Frontend Designer App Responsive"
       }
     ]
   },
-  data () {
+  data() {
     return {
       dialog: false,
       projects: []
-    }
+    };
   },
   created() {
     this.$axios
@@ -91,13 +114,12 @@ export default {
       )
       .then(res => this.updateData(res.data.data));
   },
-   methods: {
+  methods: {
     updateData(data) {
       this.projects = data.portfolioComponent.backend.projects;
     }
   }
-}
+};
 </script>
 
-<style  scoped>
-</style>
+<style scoped></style>

@@ -2,7 +2,7 @@
   <v-app :dark="goDark">
     <v-content>
       <v-container align-center>
-        <TheHeader :goDark="goDark" @changeTheme="updateTheme($event)"/>
+        <TheHeader :goDark="goDark" @changeTheme="updateTheme($event)" />
 
         <transition
           name="router-animation"
@@ -14,47 +14,45 @@
         </transition>
       </v-container>
     </v-content>
-    <TheFooter/>
+    <TheFooter />
   </v-app>
 </template>
 
 <script>
-import TheHeader from './components/TheHeader'
-import TheFooter from './components/TheFooter'
-
+import TheHeader from "./components/TheHeader";
+import TheFooter from "./components/TheFooter";
 export default {
-  name: 'App',
+  name: "App",
   metaInfo: {
-    title: 'App',
-    titleTemplate: '%s ←  Anushasan',
+    title: "App",
+    titleTemplate: "%s ←  Anushasan",
     meta: [
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { name: 'description', content: "Anushasan Poudel's Portfolio" },
-      { charset: 'utf-8' },
-      { property: 'og:title', content: 'Anushasan Poudel' },
-      { property: 'og:site_name', content: 'Anushasan Poudel' },
-      { property: 'og:type', content: 'website' },
-      { property: 'og:url', content: 'https://anushasanpoudel.com.np' },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: "description", content: "Anushasan Poudel's Portfolio" },
+      { charset: "utf-8" },
+      { property: "og:title", content: "Anushasan Poudel" },
+      { property: "og:site_name", content: "Anushasan Poudel" },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://anushasanpoudel.com.np" },
       {
-        property: 'og:image'
-
+        property: "og:image"
       },
-      { property: 'og:description', content: "Anushasan Poudel's Portfolio" }
+      { property: "og:description", content: "Anushasan Poudel's Portfolio" }
     ]
   },
   components: {
     TheHeader,
     TheFooter
   },
-  data () {
-    return { goDark: true }
+  data() {
+    return { goDark: true };
   },
   methods: {
-    updateTheme (updatedTheme) {
-      this.goDark = !updatedTheme
+    updateTheme(updatedTheme) {
+      this.goDark = !updatedTheme;
     }
   }
-}
+};
 </script>
 <style>
 @import "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css";

@@ -167,20 +167,8 @@ export default {
       this.leftImage2 = data.homeComponent.leftImage2;
       this.rightImage2 = data.homeComponent.rightImage2;
       this.icons = data.homeComponent.icons;
-      console.log(data);
-      console.log(this.leftImage);
-      console.log(this.rightImage);
-      console.log(this.leftImage2);
-      console.log(this.rightImage2);
     }
   }
-  //   data () {
-  //     this.text1 = this.$store.state.data.homeComponent.text1
-  //     this.leftImage = this.$store.state.data.homeComponent.leftImage
-  //     this.rightImage = this.$store.state.data.homeComponent.rightImage
-  //     this.leftImage2 = this.$store.state.data.homeComponent.leftImage2
-  //     this.rightImage2 = this.$store.state.data.homeComponent.rightImage2
-  //   }
 };
 </script>
 <style>
