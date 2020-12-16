@@ -28,10 +28,10 @@
             "Web Developer",
             "IT Operations"
          ],
-         "leftImage":"https://i.imgur.com/bgmaGzB.jpg',",
-         "rightImage":"https://i.imgur.com/lI41aIl.jpg',",
-         "leftImage2":"https://i.imgur.com/5i7JHvu.png',",
-         "rightImage2":"https://i.imgur.com/HHsfw1R.jpg',"
+         "leftImage":"https://i.imgur.com/bgmaGzB.jpg",
+         "rightImage":"https://i.imgur.com/lI41aIl.jpg",
+         "leftImage2":"https://i.imgur.com/5i7JHvu.png",
+         "rightImage2":"https://i.imgur.com/HHsfw1R.jpg"
       },
       "serviceComponent":{
          "services":[
@@ -65,9 +65,9 @@
                   "git":"https://github.com/BeingAnushasan/Microservices-Saathi.git",
                   "demo":"#",
                   "tech":{
-                     "tech1":"Java',",
-                     "tech2":"Spring Boot',",
-                     "tech3":"Spring Security',",
+                     "tech1":"Java",
+                     "tech2":"Spring Boot",
+                     "tech3":"Spring Security",
                      "tech4":"Docker"
                   },
                   "poster":"https://i.imgur.com/ilQRI2z.png"
@@ -78,9 +78,9 @@
                   "git":"https://github.com/BeingAnushasan/Recognizer-Gcode-Converter.git",
                   "demo":"#",
                   "tech":{
-                     "tech1":"Python',",
-                     "tech2":"C++',",
-                     "tech3":"Tkinter',",
+                     "tech1":"Python",
+                     "tech2":"C++",
+                     "tech3":"Tkinter",
                      "tech4":"Gcode"
                   },
                   "poster":"https://i.imgur.com/cyK7kvw.jpg"
@@ -95,9 +95,9 @@
                   "git":"https://github.com/BeingAnushasan/anushasan-portfolio-vue.git",
                   "demo":"https://anushasanpoudel.com.np",
                   "tech":{
-                     "tech1":"Vue',",
-                     "tech2":"JavaScript',",
-                     "tech3":"HTML',",
+                     "tech1":"Vue",
+                     "tech2":"JavaScript",
+                     "tech3":"HTML",
                      "tech4":"FormSpree"
                   },
                   "poster":"https://i.imgur.com/MXk1Zyc.png"
@@ -112,9 +112,9 @@
                   "git":"https://github.com/BeingAnushasan/RssReader.git",
                   "demo":"#",
                   "tech":{
-                     "tech1":"Java',",
-                     "tech2":"JSON',",
-                     "tech3":"XML',",
+                     "tech1":"Java",
+                     "tech2":"JSON",
+                     "tech3":"XML",
                      "tech4":"REST"
                   },
                   "poster":"https://i.imgur.com/DsVEhoE.png"
@@ -125,9 +125,9 @@
                   "git":"https://github.com/BeingAnushasan/Water-Level-Controller-main.git",
                   "demo":"#",
                   "tech":{
-                     "tech1":"Java',",
-                     "tech2":"Bluetooth Libs',",
-                     "tech3":"',",
+                     "tech1":"Java",
+                     "tech2":"Bluetooth Libs",
+                     "tech3":"",
                      "tech4":""
                   },
                   "poster":"https://i.imgur.com/w4gkDPD.png"
