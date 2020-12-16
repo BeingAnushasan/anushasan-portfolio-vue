@@ -21,7 +21,7 @@
       :sliderPositionPercentage="sliderPosition"
     />
 
-    <br>
+    <br />
 
     <vue-typer class="headline" :repeat="0" text="Anushasan Poudel"></vue-typer>
     <vue-typer
@@ -37,7 +37,7 @@
       :erase-on-complete="false"
       caret-animation="smooth"
     ></vue-typer>
-    <br>
+    <br />
     <v-flex xs12 sm6 md4 lg4 xl4>
       <v-card flat color="transparent" max-width="500">
         <v-card-title primary-title>
@@ -48,13 +48,12 @@
             </h3>
             <div>
               <p>
-                Hello! I’m Anushasan Poudel. I'm a programmer who
-                is passionate about
-                <span
-                  class="green--text font-weight-bold"
-                >Technology</span>, building great software,
-                fighting for simplicity over complexity and constantly learning.
-                When I'm not coding or learning, you'll find me making observations.
+                Hello! I’m Anushasan Poudel. I'm a programmer who is passionate
+                about
+                <span class="green--text font-weight-bold">Technology</span>,
+                building great software, fighting for simplicity over complexity
+                and constantly learning. When I'm not coding or learning, you'll
+                find me making observations.
               </p>
             </div>
           </div>
@@ -71,7 +70,7 @@
             :href="icon.href"
             target="_blank"
           >
-            <v-icon dark>{{icon.icon}}</v-icon>
+            <v-icon dark>{{ icon.icon }}</v-icon>
           </v-btn>
         </v-card-actions>
 
@@ -87,7 +86,7 @@
             :href="icon.href"
             target="_blank"
           >
-            <v-icon dark>{{icon.icon}}</v-icon>
+            <v-icon dark>{{ icon.icon }}</v-icon>
           </v-btn>
         </v-card-actions>
       </v-card>
@@ -96,60 +95,93 @@
 </template>
 
 <script>
-import { VueTyper } from 'vue-typer'
-import VueCompareImage from 'vue-compare-image'
+import { VueTyper } from "vue-typer";
+import VueCompareImage from "vue-compare-image";
+// import axios from "axios";
 
 export default {
   metaInfo: {
-    title: 'Home',
-    titleTemplate: '%s ←  Anushasan',
+    title: "Home",
+    titleTemplate: "%s ←  Anushasan",
     meta: [
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { name: 'description', content: "Anushasan Poudel's Portfolio" },
-      { charset: 'utf-8' },
-      { property: 'og:title', content: 'Anushasan Poudel' },
-      { property: 'og:site_name', content: 'Anushasan Poudel' },
-      { property: 'og:type', content: 'website' },
-      { property: 'og:url', content: 'https://anushasanpoudel.com.np' },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: "description", content: "Anushasan Poudel's Portfolio" },
+      { charset: "utf-8" },
+      { property: "og:title", content: "Anushasan Poudel" },
+      { property: "og:site_name", content: "Anushasan Poudel" },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://anushasanpoudel.com.np" },
       {
-        property: 'og:image'
+        property: "og:image"
       },
-      { property: 'og:description', content: "Anushasan Poudel's Portfolio" }
+      { property: "og:description", content: "Anushasan Poudel's Portfolio" }
     ]
   },
   components: {
-    'vue-typer': VueTyper,
+    "vue-typer": VueTyper,
     VueCompareImage
   },
-  data () {
+  data() {
     return {
-      icons: [
-        { href: 'https://github.com/beinganushasan', icon: 'fab fa-github' },
-        {
-          href: '#',
-          icon: 'fab fa-stack-overflow'
-        },
-        { href: 'https://twitter.com/beinganushasan', icon: 'fab fa-twitter' },
-        {
-          href: 'https://www.linkedin.com/in/beinganushasan',
-          icon: 'fab fa-linkedin-in'
-        },
-        {
-          href: 'https://www.facebook.com/beinganushasan',
-          icon: 'fab fa-facebook-f'
-        }
-      ],
-      text1: ['Back-End Developer', 'Web Developer', 'IT Operations'],
-      leftImage: 'https://i.imgur.com/bgmaGzB.jpg',
-      rightImage: 'https://i.imgur.com/lI41aIl.jpg',
-      leftImage2: 'https://i.imgur.com/5i7JHvu.png',
-      rightImage2: 'https://i.imgur.com/HHsfw1R.jpg',
+      icons: [],
+      // [
+      //   { href: "https://github.com/beinganushasan", icon: "fab fa-github" },
+      //   {
+      //     href: "#",
+      //     icon: "fab fa-stack-overflow"
+      //   },
+      //   { href: "https://twitter.com/beinganushasan", icon: "fab fa-twitter" },
+      //   {
+      //     href: "https://www.linkedin.com/in/beinganushasan",
+      //     icon: "fab fa-linkedin-in"
+      //   },
+      //   {
+      //     href: "https://www.facebook.com/beinganushasan",
+      //     icon: "fab fa-facebook-f"
+      //   }
+      // ],
+      // text1: ['Back-End Developer', 'Web Developer', 'IT Operations'],
+      // data: {},
+      text1: [],
+      leftImage: "",
+      rightImage: "",
+      leftImage2: "",
+      rightImage2: "",
       sliderLine: 0,
       hSize: 0,
       sliderPosition: 0.5
+    };
+  },
+  created() {
+    this.$axios
+      .get(
+        "https://raw.githubusercontent.com/BeingAnushasan/anushasan-portfolio-vue/master/data.json"
+      )
+      .then(res => this.updateData(res.data.data));
+  },
+  methods: {
+    updateData(data) {
+      this.text1 = data.homeComponent.text1;
+      this.leftImage = data.homeComponent.leftImage;
+      this.rightImage = data.homeComponent.rightImage;
+      this.leftImage2 = data.homeComponent.leftImage2;
+      this.rightImage2 = data.homeComponent.rightImage2;
+      this.icons = data.homeComponent.icons;
+      console.log(data);
+      console.log(this.leftImage);
+      console.log(this.rightImage);
+      console.log(this.leftImage2);
+      console.log(this.rightImage2);
     }
   }
-}
+  //   data () {
+  //     this.text1 = this.$store.state.data.homeComponent.text1
+  //     this.leftImage = this.$store.state.data.homeComponent.leftImage
+  //     this.rightImage = this.$store.state.data.homeComponent.rightImage
+  //     this.leftImage2 = this.$store.state.data.homeComponent.leftImage2
+  //     this.rightImage2 = this.$store.state.data.homeComponent.rightImage2
+  //   }
+};
 </script>
 <style>
 @keyframes rocking {

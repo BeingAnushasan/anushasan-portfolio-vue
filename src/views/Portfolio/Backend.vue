@@ -6,7 +6,7 @@
     </h2>
     <v-layout row justify-center align-center wrap class="mt-4 pt-2">
       <v-dialog
-        v-model="project.dialog"
+        :v-model="project.dialog"
         lazy
         max-width="1000"
         v-for="project in projects"
@@ -81,34 +81,19 @@ export default {
   data () {
     return {
       dialog: false,
-      projects: [
-        {
-          dialog: false,
-          title: 'Saathi',
-          git: 'https://github.com/BeingAnushasan/Microservices-Saathi.git',
-          demo: '#',
-          tech: {
-            tech1: 'Java',
-            tech2: 'Spring Boot',
-            tech3: 'Spring Security',
-            tech4: 'Docker'
-          },
-          poster: 'https://i.imgur.com/ilQRI2z.png'
-        },
-        {
-          dialog: false,
-          title: 'Recognizer & Gcode Converter',
-          git: 'https://github.com/BeingAnushasan/Recognizer-Gcode-Converter.git',
-          demo: '#',
-          tech: {
-            tech1: 'Python',
-            tech2: 'C++',
-            tech3: 'Tkinter',
-            tech4: 'Gcode'
-          },
-          poster: 'https://i.imgur.com/cyK7kvw.jpg'
-        }
-      ]
+      projects: []
+    }
+  },
+  created() {
+    this.$axios
+      .get(
+        "https://raw.githubusercontent.com/BeingAnushasan/anushasan-portfolio-vue/master/data.json"
+      )
+      .then(res => this.updateData(res.data.data));
+  },
+   methods: {
+    updateData(data) {
+      this.projects = data.portfolioComponent.backend.projects;
     }
   }
 }

@@ -6,7 +6,7 @@
     </h2>
     <v-layout row justify-center align-center wrap class="mt-4 pt-2">
       <v-dialog
-        v-model="project.dialog"
+        :v-model="project.dialog"
         lazy
         max-width="1000"
         v-for="project in projects"
@@ -81,21 +81,20 @@ export default {
   data () {
     return {
       dialog: false,
-      projects: [
-        {
-          dialog: false,
-          title: 'This Site',
-          git: 'https://github.com/BeingAnushasan/anushasan-portfolio-vue.git',
-          demo: 'https://anushasanpoudel.com.np',
-          tech: {
-            tech1: 'VUE',
-            tech2: 'JavaScript',
-            tech3: 'HTML',
-            tech4: 'FormSpree'
-          },
-          poster: 'https://i.imgur.com/MXk1Zyc.png'
-        }
-      ]
+      projects: []
+    }
+  },
+  created() {
+    this.$axios
+      .get(
+        "https://raw.githubusercontent.com/BeingAnushasan/anushasan-portfolio-vue/master/data.json"
+      )
+      .then(res => this.updateData(res.data.data));
+  },
+   methods: {
+    updateData(data) {
+      this.projects = data.portfolioComponent.frontend.projects;
+      console.log(this.projects)
     }
   }
 }

@@ -8,18 +8,18 @@
         </h2>
         <div class="py-4 subheading font-weight-bold">
           <v-icon large color="green" left>fas fa-map-marker-alt</v-icon>
-          <span>Pokhara,&nbsp;</span>
-          <span class="green--text">Nepal</span>
+          <span>{{myLocation.split(',')[0]}},&nbsp;</span>
+          <span class="green--text">{{myLocation.split(',')[1]}}</span>
         </div>
         <div class="py-4 subheading font-weight-bold">
           <v-icon large color="green" left>fas fa-envelope</v-icon>
-          <span>beinganushasan@</span>
-          <span class="green--text">gmail.com</span>
+          <span>{{myEmail.split('@')[0]}}@</span>
+          <span class="green--text">{{myEmail.split('@')[1]}}</span>
         </div>
         <div class="py-4 subheading font-weight-bold">
           <v-icon large color="green" left>fas fa-phone</v-icon>
           <span>+977&nbsp;</span>
-          <span class="green--text">9845447335</span>
+          <span class="green--text">{{myPhoneNumber}}</span>
         </div>
         <div class="py-4 subheading font-weight-bold">
           <v-icon large color="green" left>fas fa-check</v-icon>
@@ -121,10 +121,25 @@ export default {
     return {
       name: '',
       email: '',
-      body: ''
+      body: '',
+      myPhoneNumber: '',
+      myEmail: '',
+      myLocation: '',
     }
   },
+  created() {
+    this.$axios
+      .get(
+        "https://raw.githubusercontent.com/BeingAnushasan/anushasan-portfolio-vue/master/data.json"
+      )
+      .then(res => this.updateData(res.data.data));
+  },
   methods: {
+    updateData(data) {
+      this.myPhoneNumber = data.contactComponent.phone;
+      this.myEmail  = data.contactComponent.email;
+      this.myLocation  = data.contactComponent.location;
+    },
     submit () {
       this.$v.$touch()
     },

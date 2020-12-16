@@ -86,25 +86,21 @@ export default {
           href: 'https://www.brandly.com/'
         }
       ],
-      services: [
-        {
-          src: 'https://i.imgur.com/WBh6wt6.png',
-          title: 'Web Backend Development'
-        },
-        {
-          src: 'https://i.imgur.com/BIfQCr0.png',
-          title: 'Web Frontend Development'
-        },
+      services: [],
+    }
+  },
+  created() {
+    this.$axios
+      .get(
+        "https://raw.githubusercontent.com/BeingAnushasan/anushasan-portfolio-vue/master/data.json"
+      )
+      .then(res => this.updateData(res.data.data));
+  },
+   methods: {
+    updateData(data) {
+      this.services = data.serviceComponent.services;
+      console.log(this.services);
 
-        {
-          src: 'https://i.imgur.com/hCJhZR5.png',
-          title: 'Android Development'
-        },
-        {
-          src: 'https://i.imgur.com/9yEccDa.png',
-          title: 'Linux/SysAdmin'
-        }
-      ]
     }
   }
 }

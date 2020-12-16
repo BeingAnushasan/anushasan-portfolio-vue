@@ -138,7 +138,7 @@
       </v-flex>
       <div class="mt-4 pt-2">
         <v-btn
-          href="https://drive.google.com/file/d/1xgL1Mynrz8euapg_PtSX3jN1X10n0O3M/view?usp=sharing"
+          :href=resumeLink
           target="_blank"
           color="green"
           dark
@@ -180,10 +180,22 @@ export default {
       buffer4: 0,
       buffer5: 0,
       buffer6: 0,
+      buffer7: 0,
+      buffer8: 0,
       bufferValue: 100,
-      interval: 0
+      interval: 0,
+      resumeLink: ""
     }
   },
+  
+  created() {
+    this.$axios
+      .get(
+        "https://raw.githubusercontent.com/BeingAnushasan/anushasan-portfolio-vue/master/data.json"
+      )
+      .then(res => this.updateData(res.data.data));
+  },
+
   mounted () {
     this.startBuffer()
   },
@@ -204,6 +216,9 @@ export default {
         this.buffer7 = 70
         this.buffer8 = 60
       }, 800)
+    },
+    updateData(data) {
+      this.resumeLink = data.resumeComponent.resumeLink;
     }
   }
 }
