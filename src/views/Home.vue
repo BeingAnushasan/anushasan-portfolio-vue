@@ -25,7 +25,7 @@
 
     <vue-typer class="headline" :repeat="0" text="Anushasan Poudel"></vue-typer>
     <vue-typer
-      :text="text1"
+      :text="title"
       :repeat="Infinity"
       :shuffle="false"
       initial-action="erasing"
@@ -47,17 +47,7 @@
               <span class="green--text">Me</span>
             </h3>
             <div>
-              <p v-if="showDefaultMessage">
-                Hello! I’m Anushasan Poudel. I'm a programmer who is passionate
-                about
-                <span class="green--text font-weight-bold">Technology</span>,
-                building great software, fighting for simplicity over
-                complexity. When I'm not Coding, I'm Learning. Btw I use
-                <span class="blue--text font-weight-bold">Arch...</span>
-              </p>
-              <p v-if="!showDefaultMessage">
-                {{message}}
-              </p>
+              <p v-html="message"></p>
             </div>
           </div>
         </v-card-title>
@@ -127,9 +117,10 @@ export default {
   data() {
     return {
       icons: [],
-      message:'It will come from GitHub',
+      message:
+        'Hello! I’m Anushasan Poudel. I\'m a programmer who is passionate about <span class="green--text font-weight-bold">Technology</span>, building great software, fighting for simplicity over complexity. When I\'m not Coding, I\'m Learning. Btw I use <span class="blue--text font-weight-bold">Arch...</span>',
       showDefaultMessage: true,
-      text1: [],
+      title: [],
       leftImage: "",
       rightImage: "",
       leftImage2: "",
@@ -145,21 +136,20 @@ export default {
         "https://raw.githubusercontent.com/BeingAnushasan/anushasan-portfolio-vue/master/data.json"
       )
       .then(res => {
-        console.log(res.data);
-        this.updateData(res.data)
-        });
+        this.updateData(res.data.data);
+      });
   },
   methods: {
     updateData(data) {
-      this.text1 = data.homeComponent.text1;
+      console.log(this.message);
+      this.title = data.homeComponent.title;
       this.leftImage = data.homeComponent.leftImage;
       this.rightImage = data.homeComponent.rightImage;
       this.leftImage2 = data.homeComponent.leftImage2;
       this.rightImage2 = data.homeComponent.rightImage2;
       this.icons = data.homeComponent.icons;
-      this.message = data.homeComponent.message
-      console.log(data);      
-      console.log(this.message);
+      this.showDefaultMessage = data.homeComponent.showDefaultMessage;
+      this.message = data.homeComponent.message;
     }
   }
 };
