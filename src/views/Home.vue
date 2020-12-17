@@ -47,13 +47,16 @@
               <span class="green--text">Me</span>
             </h3>
             <div>
-              <p>
+              <p v-if="showDefaultMessage">
                 Hello! I’m Anushasan Poudel. I'm a programmer who is passionate
                 about
                 <span class="green--text font-weight-bold">Technology</span>,
-                building great software, fighting for simplicity over complexity
-                and constantly learning. When I'm not coding or learning, you'll
-                find me making observations.
+                building great software, fighting for simplicity over
+                complexity. When I'm not Coding, I'm Learning. Btw I use
+                <span class="blue--text font-weight-bold">Arch...</span>
+              </p>
+              <p v-if="!showDefaultMessage">
+                {{message}}
               </p>
             </div>
           </div>
@@ -124,24 +127,8 @@ export default {
   data() {
     return {
       icons: [],
-      // [
-      //   { href: "https://github.com/beinganushasan", icon: "fab fa-github" },
-      //   {
-      //     href: "#",
-      //     icon: "fab fa-stack-overflow"
-      //   },
-      //   { href: "https://twitter.com/beinganushasan", icon: "fab fa-twitter" },
-      //   {
-      //     href: "https://www.linkedin.com/in/beinganushasan",
-      //     icon: "fab fa-linkedin-in"
-      //   },
-      //   {
-      //     href: "https://www.facebook.com/beinganushasan",
-      //     icon: "fab fa-facebook-f"
-      //   }
-      // ],
-      // text1: ['Back-End Developer', 'Web Developer', 'IT Operations'],
-      // data: {},
+      message:'It will come from GitHub',
+      showDefaultMessage: true,
       text1: [],
       leftImage: "",
       rightImage: "",
@@ -157,7 +144,10 @@ export default {
       .get(
         "https://raw.githubusercontent.com/BeingAnushasan/anushasan-portfolio-vue/master/data.json"
       )
-      .then(res => this.updateData(res.data.data));
+      .then(res => {
+        console.log(res.data);
+        this.updateData(res.data)
+        });
   },
   methods: {
     updateData(data) {
@@ -167,6 +157,9 @@ export default {
       this.leftImage2 = data.homeComponent.leftImage2;
       this.rightImage2 = data.homeComponent.rightImage2;
       this.icons = data.homeComponent.icons;
+      this.message = data.homeComponent.message
+      console.log(data);      
+      console.log(this.message);
     }
   }
 };
