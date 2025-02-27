@@ -25,13 +25,12 @@
          ],
          "title": [
             "Back-End Developer",
-            "Web Developer",
-            "IT Operations"
+            "Web Developer"
          ],
-         "leftImage": "https://i.imgur.com/ZGlThq6.png",
-         "rightImage": "https://i.imgur.com/fE2VZtm.png",
-         "leftImage2": "https://i.imgur.com/4GwmZVb.png",
-         "rightImage2": "https://i.imgur.com/FwiUzkl.png",
+         "leftImage": "https://i.imgur.com/pQGRVux.jpg",
+         "rightImage": "https://i.imgur.com/sHjMKc6.jpg",
+         "leftImage2": "https://i.imgur.com/fOas8Gz.jpg",
+         "rightImage2": "https://i.imgur.com/rvZ3e1u.jpg",
          "message": "Hello! I’m Anushasan Poudel. I'm a programmer who is passionate about <span class=\"green--text font-weight-bold\">Technology</span>, building great software, fighting for simplicity over complexity. When I'm not Coding, I'm Learning. Btw I use <span class=\"blue--text font-weight-bold\">Arch...</span>"
       },
       "serviceComponent": {
@@ -122,7 +121,7 @@
                },
                {
                   "dialog": "false",
-                  "title": "Waer Level Controller",
+                  "title": "Water Level Controller",
                   "git": "https://github.com/BeingAnushasan/Water-Level-Controller-main.git",
                   "demo": "#",
                   "tech": {
@@ -138,8 +137,7 @@
       },
       "contactComponent": {
          "location": "Pokhara, Nepal",
-         "email": "beinganushasan@gmail.com",
-         "phone": "9845447335"
+         "email": "beinganushasan@gmail.com"
       }
    }
 }
