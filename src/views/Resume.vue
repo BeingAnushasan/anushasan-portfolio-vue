@@ -8,68 +8,6 @@
             <v-layout pt-3>
               <v-flex xs4>
                 <div class="caption font-weight-bold green--text">
-                  March 2020 -
-                </div>
-                <div class="caption font-weight-bold green--text">PRESENT</div>
-              </v-flex>
-              <v-flex class="pl-2">
-                <strong>Vue JS</strong>
-                <div class="caption mb-2">Youtube & E-Books</div>
-              </v-flex>
-            </v-layout>
-          </v-timeline-item>
-
-          <v-timeline-item color="green" small>
-            <v-layout pt-3>
-              <v-flex xs4>
-                <div class="caption font-weight-bold green--text">
-                  Nov 2019 -
-                </div>
-                <div class="caption font-weight-bold green--text">PRESENT</div>
-              </v-flex>
-              <v-flex class="pl-2">
-                <strong>Linux & Devops Stuff </strong>
-                <div class="caption mb-2">Youtube & Practice</div>
-              </v-flex>
-            </v-layout>
-          </v-timeline-item>
-
-          <v-timeline-item color="green" small>
-            <v-layout pt-3>
-              <v-flex xs4>
-                <div class="caption font-weight-bold green--text">
-                  Sep 2019 -
-                </div>
-                <div class="caption font-weight-bold green--text">PRESENT</div>
-              </v-flex>
-              <v-flex class="pl-2">
-                <strong>Spring Boot </strong>
-                <div class="caption mb-2">Youtube & E-Books</div>
-              </v-flex>
-            </v-layout>
-          </v-timeline-item>
-
-          <v-timeline-item color="green" small>
-            <v-layout pt-3>
-              <v-flex xs4>
-                <div class="caption font-weight-bold green--text">
-                  JULY 2018 -
-                </div>
-                <div class="caption font-weight-bold green--text">
-                  Till Eternity
-                </div>
-              </v-flex>
-              <v-flex class="pl-2">
-                <strong>Java Core/Advance</strong>
-                <div class="caption mb-2">Self</div>
-              </v-flex>
-            </v-layout>
-          </v-timeline-item>
-
-          <v-timeline-item color="green" small>
-            <v-layout pt-3>
-              <v-flex xs4>
-                <div class="caption font-weight-bold green--text">
                   Nov 2016 -
                 </div>
                 <div class="caption font-weight-bold green--text">Dec 2020</div>
@@ -90,12 +28,12 @@
           <v-timeline-item color="green" small>
             <v-layout pt-3>
               <v-flex xs4>
-                <div class="caption font-weight-bold green--text">IDK -</div>
-                <div class="caption font-weight-bold green--text">Always</div>
+                <div class="caption font-weight-bold green--text">June 2023 -</div>
+                <div class="caption font-weight-bold green--text">Present</div>
               </v-flex>
               <v-flex class="pl-2">
-                <strong>Fullstack Developer</strong>
-                <div class="caption mb-2">Personal Projects</div>
+                <strong>Java Developer</strong>
+                <div class="caption mb-2">Smart Data Solutions</div>
               </v-flex>
             </v-layout>
           </v-timeline-item>
@@ -104,15 +42,15 @@
             <v-layout pt-3>
               <v-flex xs4>
                 <div class="caption font-weight-bold green--text">
-                  AUG 2010 -
+                  July 2021 -
                 </div>
                 <div class="caption font-weight-bold green--text">
-                  Till I Die
+                  June 2023
                 </div>
               </v-flex>
               <v-flex class="pl-2">
-                <strong>IT Technician</strong>
-                <div class="caption mb-2">At Home</div>
+                <strong>Software Engineer II</strong>
+                <div class="caption mb-2">Cotiviti Nepal Pvt. Ltd.</div>
               </v-flex>
             </v-layout>
           </v-timeline-item>
@@ -141,16 +79,9 @@
           color="green"
           height="16"
         ></v-progress-linear>
-        <strong>Vue Js</strong>
+        <strong>Angular</strong>
         <v-progress-linear
           v-model="buffer3"
-          :buffer-value="bufferValue"
-          color="green"
-          height="16"
-        ></v-progress-linear>
-        <strong>C/C++</strong>
-        <v-progress-linear
-          v-model="buffer4"
           :buffer-value="bufferValue"
           color="green"
           height="16"
@@ -172,13 +103,6 @@
         <strong>Linux</strong>
         <v-progress-linear
           v-model="buffer6"
-          :buffer-value="bufferValue"
-          color="green"
-          height="16"
-        ></v-progress-linear>
-        <strong>CCNA</strong>
-        <v-progress-linear
-          v-model="buffer7"
           :buffer-value="bufferValue"
           color="green"
           height="16"
